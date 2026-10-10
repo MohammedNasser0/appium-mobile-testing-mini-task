@@ -1,0 +1,24 @@
+dbug Appium Creating hash file directory: [PROJECT]\node_modules\.cache\appium
+Running 7 doctor checks for the "uiautomator2" driver
+info Doctor ### Starting doctor diagnostics  ###
+info Doctor  ✔ ANDROID_HOME is set to: %USERPROFILE%\AppData\Local\Android\Sdk
+info Doctor    Checking adb, emulator
+info Doctor      'adb' exists in %USERPROFILE%\AppData\Local\Android\Sdk\platform-tools\adb.exe
+info Doctor      'emulator' exists in %USERPROFILE%\AppData\Local\Android\Sdk\emulator\emulator.exe
+info Doctor  ✔ adb, emulator exist in '%USERPROFILE%\AppData\Local\Android\Sdk'
+info Doctor  ✔ JAVA_HOME is set to: C:\Program Files\Android\Android Studio\jbr
+info Doctor  ✔ 'bin\java.exe' exists under 'C:\Program Files\Android\Android Studio\jbr'
+WARN Doctor  ✖ bundletool.jar cannot be found
+WARN Doctor  ✖ ffmpeg.exe cannot be found
+WARN Doctor  ✖ gst-launch-1.0.exe and/or gst-inspect-1.0.exe cannot be found
+info Doctor ### Diagnostic completed, 0 required fixes needed, 3 optional fixes possible. ###
+info Doctor 
+info Doctor ### Optional Manual Fixes ###
+info Doctor To fix these optional issues, please do the following manually:
+WARN Doctor  ➜ bundletool.jar is used to handle Android App bundles. Please download the binary from https://github.com/google/bundletool/releases/ and store it to any folder listed in the PATH environment variable. Folders that are currently present in PATH: [local environment PATH redacted]
+WARN Doctor  ➜ ffmpeg.exe is used to capture screen recordings from the device under test. Please read https://www.ffmpeg.org/download.html.
+WARN Doctor  ➜ gst-launch-1.0.exe and gst-inspect-1.0.exe are used to stream the screen of the device under test. Please read https://gstreamer.freedesktop.org/documentation/installing/index.html?gi-language=c.
+info Doctor 
+info Doctor Bye! All issues have been fixed!
+info Doctor 
+

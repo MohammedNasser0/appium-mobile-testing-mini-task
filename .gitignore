@@ -1,0 +1,12 @@
+.gradle/
+build/
+node_modules/
+.appium/
+apps/*.apk
+artifacts/raw/
+*.log
+local.properties
+.idea/
+*.iml
+tools/
+artifacts/screenshots/*-failed.png

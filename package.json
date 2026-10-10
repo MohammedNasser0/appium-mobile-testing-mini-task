@@ -1,0 +1,14 @@
+{
+  "name": "appium-mobile-testing-mini-task",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "doctor": "appium driver doctor uiautomator2",
+    "server": "appium --address 127.0.0.1 --use-plugins=inspector"
+  },
+  "devDependencies": {
+    "appium": "3.8.0",
+    "appium-uiautomator2-driver": "8.7.0",
+    "appium-inspector-plugin": "2026.9.2"
+  }
+}

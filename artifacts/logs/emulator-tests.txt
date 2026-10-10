@@ -1,0 +1,51 @@
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+Gradle suite > Gradle test > mobile.ApkInteractionTest > entersTextAndChecksOption STANDARD_OUT
+    Screenshot: artifacts\screenshots\emulator-apk-interaction.png
+
+Gradle suite > Gradle test > mobile.ApkInteractionTest > entersTextAndChecksOption PASSED
+
+Gradle suite > Gradle test > mobile.BuiltInSettingsTest > opensNetworkSettings STANDARD_OUT
+    Screenshot: artifacts\screenshots\emulator-built-in-settings.png
+
+Gradle suite > Gradle test > mobile.BuiltInSettingsTest > opensNetworkSettings PASSED
+
+Gradle suite > Gradle test > mobile.ChromeWebTest > submitsNameInChrome STANDARD_OUT
+    Screenshot: artifacts\screenshots\emulator-chrome-web.png
+
+Gradle suite > Gradle test > mobile.ChromeWebTest > submitsNameInChrome PASSED
+
+Gradle suite > Gradle test > mobile.DragAndDropTest > dragDotOntoTarget STANDARD_OUT
+    Screenshot: artifacts\screenshots\emulator-drag-before.png
+    Screenshot: artifacts\screenshots\emulator-drag-after.png
+
+Gradle suite > Gradle test > mobile.DragAndDropTest > dragDotOntoTarget PASSED
+
+Gradle suite > Gradle test > mobile.ScrollGestureTest > scrollRevealsWebViewRow STANDARD_OUT
+    Screenshot: artifacts\screenshots\emulator-scroll-before.png
+    Screenshot: artifacts\screenshots\emulator-scroll-after.png
+
+Gradle suite > Gradle test > mobile.ScrollGestureTest > scrollRevealsWebViewRow PASSED
+
+Gradle suite > Gradle test > mobile.SlideGestureTest > slideChangesSeekBarProgress STANDARD_OUT
+    Screenshot: artifacts\screenshots\emulator-slide-before.png
+    Screenshot: artifacts\screenshots\emulator-slide-after.png
+
+Gradle suite > Gradle test > mobile.SlideGestureTest > slideChangesSeekBarProgress PASSED
+
+Gradle suite > Gradle test > mobile.TapGestureTest > tapChecksVisibleCheckbox STANDARD_OUT
+    Screenshot: artifacts\screenshots\emulator-tap-before.png
+    Screenshot: artifacts\screenshots\emulator-tap-after.png
+
+Gradle suite > Gradle test > mobile.TapGestureTest > tapChecksVisibleCheckbox PASSED
+
+BUILD SUCCESSFUL in 2m 38s
+2 actionable tasks: 1 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
