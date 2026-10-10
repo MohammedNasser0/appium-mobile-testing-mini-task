@@ -4,7 +4,7 @@ A small Java project for practicing Android tests with Appium.
 
 It tests Android Settings, the API Demos APK, four gestures, and a form in Chrome. TestNG is used for assertions, and `BaseTest` handles the driver setup.
 
-The emulator scenarios have been tested. Physical phone execution is still pending; see [run evidence](docs/RESULTS.md).
+Seven emulator tests and five physical phone tests passed. See [run evidence](docs/RESULTS.md) for reports and screenshots.
 
 ## Setup on Windows
 
@@ -53,6 +53,8 @@ For a real phone, enable Developer Options and USB Debugging, connect the USB ca
 ```
 
 The setup checks that `-Target real` actually points to a physical device. `RealDeviceTest` is excluded from emulator runs.
+
+Phone APK tests use `noReset` and `forceAppLaunch` because the OPPO phone blocks Appium's data-clear command. Each test starts from the app homepage. The slide test first moves the thumb to a known position, then checks that dragging increases its value.
 
 ### Chrome
 

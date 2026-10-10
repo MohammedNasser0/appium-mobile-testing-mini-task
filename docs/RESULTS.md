@@ -41,8 +41,19 @@ Inspector was connected to the emulator to identify and check the locators:
 - [APK checkbox resource ID, accessibility ID and XPath](screenshots/inspector-apk-id.jpg)
 - [Locator notes and capabilities](LOCATORS.md)
 
-## Physical Android device — pending
+## Physical Android device
 
-No physical Android device was available in `adb devices` during these runs. `RealDeviceTest` is implemented, but its execution and physical-device screenshots are still pending. The four gesture tests have been executed on the emulator, not verified on a physical phone yet.
+The tests ran on an OPPO A3 connected through USB Debugging. The setup verified that the selected device was not an emulator. Final combined run: **5 tests passed, 0 failed, 0 skipped**, in 1 minute 48 seconds.
 
-Connect a phone, approve USB Debugging on the phone, then follow the real-device commands in the README. Emulator screenshots are not presented as physical-device evidence.
+| Test | Verified result | Screenshot |
+| --- | --- | --- |
+| Previous APK scenario | Input matches and checkbox is checked | [Physical phone](../artifacts/screenshots/real-physical-device-apk.png) |
+| Tap | Checkbox changes from unchecked to checked | [Before](../artifacts/screenshots/real-tap-before.png), [after](../artifacts/screenshots/real-tap-after.png) |
+| Scroll | WebView row becomes visible | [Before](../artifacts/screenshots/real-scroll-before.png), [after](../artifacts/screenshots/real-scroll-after.png) |
+| Slide | Seek Bar value increases to 83 | [Before](../artifacts/screenshots/real-slide-before.png), [after](../artifacts/screenshots/real-slide-after.png) |
+| Drag & Drop | Result label becomes Dropped! | [Before](../artifacts/screenshots/real-drag-before.png), [after](../artifacts/screenshots/real-drag-after.png) |
+
+- [Saved physical-device HTML report](../artifacts/real-device-test-report/index.html)
+- [Final console output](../artifacts/logs/real-device-tests.txt)
+
+The first attempt could not clear API Demos data because this phone blocks the shell data-clear permission. Physical APK sessions now preserve data with `noReset` and restart the activity using `forceAppLaunch`. The Seek Bar test uses a point inside the track to account for phone theme padding. Failed attempts remain local; the links above show the successful final run. Chrome and Settings evidence above comes from the emulator.

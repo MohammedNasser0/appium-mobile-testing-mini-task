@@ -1,0 +1,42 @@
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test
+
+Gradle suite > Gradle test > mobile.DragAndDropTest > dragDotOntoTarget STANDARD_OUT
+    Screenshot: artifacts\screenshots\real-drag-before.png
+    Screenshot: artifacts\screenshots\real-drag-after.png
+
+Gradle suite > Gradle test > mobile.DragAndDropTest > dragDotOntoTarget PASSED
+
+Gradle suite > Gradle test > mobile.RealDeviceTest > entersTextAndChecksOption STANDARD_OUT
+    Screenshot: artifacts\screenshots\real-apk-interaction.png
+    Screenshot: artifacts\screenshots\real-physical-device-apk.png
+
+Gradle suite > Gradle test > mobile.RealDeviceTest > entersTextAndChecksOption PASSED
+
+Gradle suite > Gradle test > mobile.ScrollGestureTest > scrollRevealsWebViewRow STANDARD_OUT
+    Screenshot: artifacts\screenshots\real-scroll-before.png
+    Screenshot: artifacts\screenshots\real-scroll-after.png
+
+Gradle suite > Gradle test > mobile.ScrollGestureTest > scrollRevealsWebViewRow PASSED
+
+Gradle suite > Gradle test > mobile.SlideGestureTest > slideChangesSeekBarProgress STANDARD_OUT
+    Screenshot: artifacts\screenshots\real-slide-before.png
+    Screenshot: artifacts\screenshots\real-slide-after.png
+
+Gradle suite > Gradle test > mobile.SlideGestureTest > slideChangesSeekBarProgress PASSED
+
+Gradle suite > Gradle test > mobile.TapGestureTest > tapChecksVisibleCheckbox STANDARD_OUT
+    Screenshot: artifacts\screenshots\real-tap-before.png
+    Screenshot: artifacts\screenshots\real-tap-after.png
+
+Gradle suite > Gradle test > mobile.TapGestureTest > tapChecksVisibleCheckbox PASSED
+
+BUILD SUCCESSFUL in 1m 48s
+2 actionable tasks: 2 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

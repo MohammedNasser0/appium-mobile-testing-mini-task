@@ -11,15 +11,16 @@ public class SlideGestureTest extends BaseTest {
         WebElement seekBar = visible(By.id("io.appium.android.apis:id/seek"));
         WebElement progress = visible(By.id("io.appium.android.apis:id/progress"));
         Rectangle bounds = seekBar.getRect();
-        // The label starts empty; set the thumb to zero before measuring the slide.
+        // Move away from the initial midpoint; phone themes can pad the minimum thumb position.
+        int startX = bounds.x + (target.equals("real") ? bounds.width / 4 : 12);
         driver.executeScript("mobile: clickGesture", Map.of(
-                "x", bounds.x + 12, "y", bounds.y + bounds.height / 2));
-        wait.until(d -> progress.getText().startsWith("0 "));
+                "x", startX, "y", bounds.y + bounds.height / 2));
+        wait.until(d -> progress.getText().matches("\\d+ .*"));
         int beforeValue = Integer.parseInt(progress.getText().split(" ")[0]);
         screenshot("slide-before");
         // Sliding the thumb horizontally changes the displayed progress value.
         driver.executeScript("mobile: dragGesture", Map.of(
-                "startX", bounds.x + 12, "startY", bounds.y + bounds.height / 2,
+                "startX", startX, "startY", bounds.y + bounds.height / 2,
                 "endX", bounds.x + (int) (bounds.width * 0.8),
                 "endY", bounds.y + bounds.height / 2, "speed", 600));
         wait.until(d -> Integer.parseInt(progress.getText().split(" ")[0]) > beforeValue);

@@ -66,6 +66,11 @@ public abstract class BaseTest {
             if (!Files.exists(apk)) throw new IllegalArgumentException("Download the APK first: " + apk);
             options.setApp(apk.toString()).setAppPackage("io.appium.android.apis")
                     .setAppActivity("io.appium.android.apis.ApiDemos");
+            if (target.equals("real")) {
+                // Some phones block shell pm clear; restart API Demos without clearing its data.
+                options.setNoReset(true);
+                options.setCapability("appium:forceAppLaunch", true);
+            }
         }
         driver = new AndroidDriver(URI.create(System.getProperty("mobile.server", "http://127.0.0.1:4723")).toURL(), options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
